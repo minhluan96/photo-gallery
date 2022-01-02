@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from 'antd';
+import {Button, Layout, Typography} from 'antd';
 
 export const BodyWrapper = styled.div`
   padding: 64px;
@@ -19,4 +19,17 @@ export const UploadButton = styled(Button)`
 
 export const GallerySection = styled.div`
   background: #fff;
+`;
+
+export const StyledTitle = styled(Typography.Title)`
+  && {
+    color: #fff;
+  }
+`;
+
+export const StyledHeader = styled(Layout.Header)`
+  && {
+    display: flex;
+    align-items: center;
+  }
 `;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ListContainer = styled.div`
+export const ListContainer = styled.ul`
   display: grid;
   gap: 3em;
   -webkit-box-align: center;
@@ -9,6 +9,7 @@ export const ListContainer = styled.div`
   grid-template-rows: 240px;
   grid-auto-rows: 240px;
   justify-content: center;
+  list-style-type: none;
 
   @media (min-width: 576px) {
     grid-template-columns: repeat(2, 1fr);

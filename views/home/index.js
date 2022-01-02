@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Layout, Typography } from 'antd';
 import {
   BodyWrapper,
-  GallerySection,
+  GallerySection, StyledHeader, StyledTitle,
   UploadButton,
   UploadSection,
 } from './styles';
@@ -38,6 +38,10 @@ export default function HomeView() {
   const onUploadCancel = () => {
     setUploadVisible(false);
   };
+
+  useEffect(() => {
+    document.title = 'Photo Gallery';
+  }, []);
 
   const getGallery = (page) => {
     setLoading(true);
@@ -82,13 +86,14 @@ export default function HomeView() {
     if (photoIndex < 0 || photoIndex >= photos.length) return;
 
     const navigatedPhoto = photos[photoIndex];
-    console.log(photoIndex);
     setPhotoDetail({ ...navigatedPhoto.data, index: photoIndex });
   };
 
   return (
     <Layout>
-      <Header></Header>
+      <StyledHeader>
+        <StyledTitle level={4}>Photo Gallery</StyledTitle>
+      </StyledHeader>
       <Content>
         <BodyWrapper>
           <UploadSection>

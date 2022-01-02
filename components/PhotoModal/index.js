@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import {
+  CloseButton,
   DescriptionWrapper,
   ImageWrapper,
   InfoWrapper,
@@ -53,16 +54,16 @@ export default function PhotoModal({
         </NavigationWrapper>
 
         <ModalContent>
+          <CloseButton
+            type='link'
+            onClick={onCancelHandler}
+            icon={<StyledIcon className='uil uil-times' />}
+          />
           <ModalLayout>
             <ImageWrapper>
               <StyledImage src={photoData?.display_url} alt={photoData?.name} />
             </ImageWrapper>
             <InfoWrapper>
-              <StyledButton
-                type='link'
-                onClick={onCancelHandler}
-                icon={<StyledIcon className='uil uil-times' />}
-              />
               <TitleWrapper>
                 <Title level={4}>{photoData?.name}</Title>
               </TitleWrapper>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Button} from "antd";
 
-export const PhotoWrapper = styled.div`
+export const PhotoWrapper = styled.li`
   width: 100%;
   height: 100%;
   position: relative;

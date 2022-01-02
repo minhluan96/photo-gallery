@@ -23,6 +23,7 @@ export const ModalContent = styled.div`
   width: 70%;
   border-radius: 16px;
   min-height: 480px;
+  position: relative;
 `;
 
 export const NavigationWrapper = styled.div`
@@ -35,11 +36,18 @@ export const NavigationWrapper = styled.div`
 
 export const StyledButton = styled(Button)`
   color: #aaaaaa;
-  float: right;
 
   &:hover {
     color: #000;
   }
+`;
+
+export const CloseButton = styled(StyledButton)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 8px;
+  padding-right: 32px;
 `;
 
 export const StyledIcon = styled.i`
@@ -49,12 +57,6 @@ export const StyledIcon = styled.i`
     `
     color: ${color};
   `}
-`;
-
-export const StyledHeader = styled.div`
-  display: flex;
-  justify-content: end;
-  align-items: center;
 `;
 
 export const ModalLayout = styled.div`
