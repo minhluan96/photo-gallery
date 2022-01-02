@@ -7,10 +7,12 @@ const env = process.env.NODE_ENV || 'development';
 
 const envConfigs = {
   development: {
-    API_URL: '',
+    API_URL: 'https://api.imgbb.com',
+    API_KEY: 'ca0226b9b94644bbadb59523a8f44524',
   },
   production: {
-    API_URL: '',
+    API_URL: 'https://api.imgbb.com',
+    API_KEY: 'ca0226b9b94644bbadb59523a8f44524',
   },
 }[env];
 
