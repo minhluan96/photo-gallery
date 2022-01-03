@@ -26,8 +26,11 @@ function* onUploadImage({ params, onSuccess, onFailure }) {
 
     const newPhoto = {
       ...response,
-      name: params.name,
-      description: params.description,
+      data: {
+        ...response.data,
+        name: params.name,
+        description: params.description,
+      },
     };
     savePhoto(newPhoto);
 
